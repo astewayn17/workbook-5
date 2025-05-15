@@ -3,10 +3,11 @@ package com.pluralsight;
 // Abstract since no object are made with the asset class
 public abstract class Asset {
 
-    // Making protected variable properties that are protected to be used in the subclasses
-    protected String description;
-    protected String dateAcquired;
-    protected double originalCost;
+    // Making private variable properties that are only accessible from getters and setters regardless of subclasses
+    // Could make public but then this.property would be accessible package wide
+    private String description;
+    private String dateAcquired;
+    private double originalCost;
 
     // Constructor
     public Asset(String description, String dateAcquired, double originalCost) {
